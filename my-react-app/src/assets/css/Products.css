@@ -1,0 +1,688 @@
+/* Global Styles */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    font-weight: bold;
+    color: #0056b3;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Button Style */
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003d80;
+    transform: translateY(-2px);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+/* Ensuring card images stay centered */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Subtle card text transitions */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card-title:hover {
+    color: #0056b3;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Price Styling */
+.price-original {
+    color: #888;
+    font-size: 1rem;
+}
+
+.price-original del {
+    text-decoration: line-through;
+}
+
+
+
+.price-discount {
+    color: #ff2d16;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Success Button Styling */
+.btn-success {
+    border-radius: 50px;
+    padding: 7px 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+/* Card Layout */
+.card + .card {
+    margin-top: 20px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Filter Section */
+.filter-wrapper {
+    text-align: center;
+    padding: 35px 5px;
+   
+}
+
+.filter-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grid Layout for Filter */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 33px;
+    max-width: 888px;
+    margin: 0 auto;
+}
+
+.filter-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.filter-card:hover .filter-image {
+    transform: scale(1.1);
+}
+
+.filter-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-card:hover .filter-overlay {
+    opacity: 1;
+}
+
+.filter-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .filter-wrapper {
+        padding: 20px;
+    }
+
+    .filter-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Stack the filter grid items vertically on small screens */
+    .filter-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Card image size adjustment for smaller screens */
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .btn-success {
+        font-size: 0.8rem;
+        padding: 6px 7px;
+    }
+
+    /* Center text and adjust layout for small screens */
+    .about .col-md-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .mb-4{
+        padding-top: 16px;
+    }
+    .about .col-md-6 .btn {
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .filter-card {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .filter-image {
+        height: 200px;
+    }
+}
+
+
+.filter-card:hover .filter-image {
+  transform: scale(1.1);
+}
+
+.filter-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-card:hover .filter-overlay {
+  opacity: 1;
+}
+
+.filter-text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.card-body .btn {
+    flex: 1; /* Để các nút có cùng chiều rộng */
+  }
+  
+  .card-body .btn-info {
+    margin-right: 10px; /* Khoảng cách giữa các nút */
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Khoảng cách giữa các nút */
+  }
+  
+  .button {
+    background-color: transparent; /* Nền trong suốt */
+    border: 1px solid #ccc; /* Đường viền màu xám nhạt */
+    color: #333; /* Màu chữ tối */
+    padding: 5px 15px; /* Khoảng cách bên trong nút */
+    border-radius: 4px; /* Bo góc nhẹ */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi */
+  }
+  
+  .button:hover {
+    background-color: #f0f0f0; /* Nền sáng hơn khi di chuột */
+    color: #000; /* Màu chữ tối hơn khi di chuột */
+  }
+  
+  .button:focus {
+    outline: none; /* Bỏ viền khi nút được chọn */
+  }
+
+  /* Nút phân trang */
+  .pagination {
+    margin: 20px 0;
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    justify-content: center; /* Căn giữa các nút */
+  }
+  
+  .page-item {
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+  }
+  
+  .page-link {
+    box-shadow: rgb(255, 127, 6);
+    background-color: #4e4e4e; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Bỏ viền */
+    border-radius: 50%; /* Bo góc thành hình tròn */
+    width: 40px; /* Chiều rộng */
+    height: 40px; /* Chiều cao */
+    display: flex; /* Sử dụng flexbox để căn giữa chữ */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    font-weight: bold; /* Chữ đậm */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển tiếp */
+  }
+  
+  .page-link:hover {
+    background-color: #ffdd80; /* Màu nền khi hover */
+    box-shadow: #fff5f5;
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+  }
+  
+  .page-link:disabled {
+    background-color: #000000; /* Màu nền cho nút bị vô hiệu hóa */
+    color: #fff; /* Màu chữ cho nút bị vô hiệu hóa */
+    cursor: not-allowed; /* Con trỏ khi hover */
+  }
+  
+  .active .page-link {
+    
+    background-color: #ff9b28; /* Màu nền cho nút đang hoạt động */
+  }
+
+
+/* Trang xem chi tiết sản phẩm */
+
+/* Mặc định cho các màn hình lớn */
+.detail-body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px; /* Thêm khoảng cách xung quanh toàn bộ trang */
+}
+
+.detail-h1, .detail-h2, .detail-h3 {
+    font-weight: bold;
+}
+
+.detail-product-info {
+    margin-left: 20px;
+}
+
+.detail-reviews h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.detail-review p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.detail-img-fluid {
+    height: 85%;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Các nút */
+.detail-btn-lg {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.detail-btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+.detail-btn-warning:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.detail-btn-outline-primary {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.detail-btn-outline-primary:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.detail-modal-content {
+    border-radius: 10px;
+}
+
+.detail-modal-footer button {
+    font-size: 16px;
+}
+
+.detail-textarea {
+    resize: none;
+}
+
+/* Đặt cho nhóm nút (btn-group) để các nút nằm cạnh nhau */
+.detail-size-selection {
+    display: flex;
+   gap: 10px; /* Spacing between buttons */
+}
+
+/* Đảm bảo các nút trong btn-group có chiều rộng đồng đều */
+.detail-size-btn {
+    flex: 1; /* Tự động chia đều không gian */
+    text-align: center; /* Căn giữa nội dung */
+    padding: 0px; /* Padding cho nút */
+    border-radius: 5px; /* Góc bo tròn */
+    font-weight: bold;
+    width: 50px;
+    transition: background-color 0.3s, border-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+/* Màu nền khi hover */
+.detail-size-btn:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+/* Màu nền khi nút được chọn */
+.detail-size-btn.active {
+    background-color: #ff9100;
+    color: white;
+    border-color: #000000;
+}
+
+/* Làm nổi bật nút khi được chọn */
+.detail-size-btn.selected {
+    border-color: #ff9811;
+    background-color: #ff9036;
+    color: white;
+}
+
+/* Đảm bảo tất cả các nút có cùng chiều cao */
+.detail-btn-group .detail-btn {
+    height: 40px; /* Đặt chiều cao của nút */
+}
+
+/* Responsive: Điều chỉnh khi màn hình nhỏ hơn 768px (máy tính bảng và di động) */
+@media (max-width: 768px) {
+    .detail-body {
+        padding: 10px;
+    }
+
+    .detail-product-info {
+        margin-left: 0;
+    }
+
+    .detail-img-fluid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .detail-h1 {
+        font-size: 1.5rem;
+    }
+
+    .detail-btn-lg {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .detail-size-selection {
+        flex-direction: column; /* Nút chọn kích cỡ xếp dọc */
+    }
+
+    .detail-size-btn {
+        width: 100%; /* Nút chọn kích cỡ chiếm hết chiều rộng */
+        margin-bottom: 10px; /* Khoảng cách giữa các nút */
+    }
+
+    .detail-btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Responsive: Điều chỉnh khi màn hình nhỏ hơn 480px (di động nhỏ) */
+@media (max-width: 480px) {
+    .detail-h1 {
+        font-size: 1.2rem;
+    }
+
+    .detail-reviews h2 {
+        font-size: 1.2rem;
+    }
+
+    .detail-review p {
+        font-size: 0.9rem;
+    }
+
+    .detail-btn-lg {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .detail-size-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* Phần đánh giá sản phẩm */
+
+/* Phần đánh giá */
+.product-reviews {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Đánh giá sao */
+.star-rating {
+    display: flex;
+    gap: 10px;
+    font-size: 20px; /* Giảm kích thước sao */
+    cursor: pointer;
+}
+
+.star-rating .star {
+    color: #ccc;
+}
+
+.star-rating .star.selected {
+    color: #fbc02d;
+}
+
+.review-form {
+    margin-bottom: 20px;
+}
+
+.review-form h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.review-form textarea {
+    width: 100%;
+    padding: 8px; /* Giảm padding của textarea */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px; /* Giảm kích thước chữ trong textarea */
+}
+
+.review-form button {
+    padding: 10px 18px; /* Giảm padding của nút gửi */
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: white;
+    font-size: 14px; /* Giảm kích thước chữ của nút */
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #1b5e20;
+}
+
+/* Hiển thị đánh giá khách hàng */
+.reviews-list {
+    margin-top: 40px;
+}
+
+.review {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0; /* Giảm padding trong mỗi đánh giá */
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-rating {
+    color: #fbc02d;
+    margin-top: 5px;
+}
+
+.review-comment {
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Nút bấm thêm giở hàng ở detail */
+
+/* Căn nút về bên phải */
+.d-flex {
+    display: flex;
+    justify-content: flex-end; /* Căn nút sang bên phải */
+    align-items: center; /* Giữ nút căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Nút Thêm vào giỏ hàng */
+.btn-warning {
+    background-color: #f4a300; /* Màu vàng ấm, phù hợp với chủ đề cà phê */
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #d68900; /* Màu vàng đậm khi hover */
+    transform: translateY(-3px); /* Hiệu ứng nâng lên khi hover */
+}
+
+/* Nút Đánh giá sản phẩm */
+.btn-outline-primary {
+    color: #2e7d32; /* Màu xanh đậm như màu lá cây */
+    border-color: #2e7d32;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2e7d32; /* Màu xanh khi hover */
+    color: #fff;
+    transform: translateY(-3px); /* Hiệu ứng nâng lên khi hover */
+}

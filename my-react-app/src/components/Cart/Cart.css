@@ -1,0 +1,23 @@
+.cart-items {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng khi đủ 5 sản phẩm */
+    gap: 15px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: space-between; /* Căn đều các sản phẩm */
+  }
+  
+  .cart-item {
+    flex: 0 1 calc(20% - 15px); /* Mỗi sản phẩm chiếm 20% chiều rộng và có khoảng cách */
+    box-sizing: border-box; /* Đảm bảo tính toán đúng kích thước */
+    border: 1px solid #ddd; /* Viền cho sản phẩm */
+    padding: 10px;
+    border-radius: 8px; /* Bo góc cho sản phẩm */
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .cart-item img {
+    width: 100%; /* Đảm bảo ảnh chiếm hết chiều rộng */
+    height: auto;
+    border-radius: 4px;
+  }
+  

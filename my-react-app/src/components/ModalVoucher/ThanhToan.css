@@ -1,0 +1,170 @@
+.table-dark {
+    background-color: #4b3832;
+  }
+  
+  .btn-primary {
+    background-color: #a67b5b;
+    border-color: #a67b5b;
+  }
+  
+  .btn-secondary {
+    background-color: #c8b8a7;
+    border-color: #c8b8a7;
+  }
+  
+  table td {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+    table td img {
+      width: 50px;
+      height: auto;
+    }
+    .table-responsive {
+      overflow-x: auto;
+    }
+    .card {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* .input-group {
+    margin: 0 auto;
+  } */
+  
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* .input-group {
+    margin-bottom: 20px;
+  } */
+  
+  .input-group .form-control {
+    font-size: 14px;
+  }
+  
+  .input-group .btn {
+    font-size: 14px;
+  }
+  
+  .modal-dialog {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 15px;
+  }
+  
+  /* Các mục voucher */
+  .voucher-item {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effects */
+  .voucher-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-5px);
+  }
+  
+  /* Đảm bảo hình ảnh voucher không bị thay đổi kích thước */
+  .voucher-item img {
+    width: 80px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Phần mô tả voucher */
+  .voucher-item .voucher-description {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b3832;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+  
+  /* Màu sắc của badge */
+  .voucher-item .badge {
+    background-color: #28a745;
+  }
+  
+  .voucher-item.selected {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+  
+  .voucher-item.selected .voucher-description {
+    font-weight: bold;
+    color: #155724;
+  }
+  
+  /* Điều chỉnh cho checkbox */
+  .voucher-item input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+  }
+  
+  /* Nút áp dụng voucher */
+  .modal-body .btn-primary {
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-body .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  .container.my-5 {
+      width: 100%; /* Chiều rộng container chiếm 90% chiều rộng của màn hình */
+      max-width: 1400px; /* Giới hạn chiều rộng tối đa là 1400px */
+      margin: 0 auto; /* Đảm bảo container nằm ở giữa */
+    }
+  
+    .table th {
+      text-align: center; /* Căn giữa các thẻ tiêu đề */
+    }
